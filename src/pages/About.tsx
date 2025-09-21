@@ -3,7 +3,7 @@ import axios from "axios";
 import { memo } from "react";
 
 const About = () => {
-  const { data, isLoading, error, isError, isSuccess } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["recipe"],
     queryFn: () =>
       axios.get("https://dummyjson.com/recipes").then((res) => res.data),
